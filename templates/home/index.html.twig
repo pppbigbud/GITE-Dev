@@ -4,4 +4,8 @@
 
 {% block main %}
 
+    {% for product in products %}
+        {% include('partials/_cards.html.twig') %}
+    {% endfor %}
+
 {% endblock %}
