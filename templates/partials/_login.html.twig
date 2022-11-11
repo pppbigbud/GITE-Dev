@@ -1,0 +1,36 @@
+<div class="blocPanier">
+    <div class="centrage">
+        <a class="button" href='#popup1'><img src="{{ asset('/build/images/connexion.png') }}" alt="Connexion Admin Les Bruyeres"></a>
+        <img src="{{ asset('/build/images/chariot.png') }}" alt="Panier Les Bruyeres">
+    </div>
+</div>
+
+
+<div id="popup1" class="overlay">
+    <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <img src="{{ asset('/build/images/Header-Images/LOGO-Gite-Les-Bruyeres.png') }}" alt="logoGiteLesBruyeres"
+                 class="logoLoginPopUpNoir"/>
+            <!--                <h4 class="titreConnexionLogin">Connexion</h4>-->
+            <form method="post">
+                <h4 class="titleItemConnect">Votre Identifiant</h4>
+                <label>
+                    <input type="text" class="inputColor" name="id">
+                </label>
+                <h4 class="titleItemConnect">Votre Mot de Passe</h4>
+                <label>
+                    <input type="text" class="inputColor" name="mdp">
+                </label>
+                <div class="btnAllign">
+                    <label>
+                        <input type="checkbox" class="checkStayTune">
+                    </label>Rester connecté
+                </div>
+                <button class="btnLogin" type="submit"><h3>Se connecter</h3></button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
