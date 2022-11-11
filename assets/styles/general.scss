@@ -1,0 +1,86 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*==================== GOOGLE FONTS ====================*/
+
+@font-face {
+}
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /*========== Colors ==========*/
+
+  --bg-color: rgb(0, 0, 0);
+
+  /*========== Font and typography ==========*/
+
+  /* Font Size */
+
+  --name-font-size: 3rem;
+
+  /* Font Weight */
+
+  --font-normal: 400;
+}
+
+/*==================== GLOBAL CSS CLASS ====================*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+span {
+
+}
+
+li {
+  font-size: 1.3vw;
+}
+
+/*==================== SIDE ====================*/
+
+/*==================== HEADER ====================*/
+
+/*==================== MAIN ====================*/
+
+/*==================== FOOTER ====================*/
+
+/*==================== MEDIA QUERIES ====================*/
+
+@media screen and (min-width: 968px) {
+}
+
+/*==================== TRANSITIONS ====================*/

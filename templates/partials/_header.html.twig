@@ -1,118 +1,91 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-        <!-- Toggle button -->
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-mdb-toggle="collapse"
-                data-mdb-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-        >
-            <i class="fas fa-bars"></i>
-        </button>
+<div class="ombreBandeauBlanc">
 
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Navbar brand -->
-            <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                <img
-                        src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-                        height="15"
-                        alt="MDB Logo"
-                        loading="lazy"
-                />
-            </a>
-            <!-- Left links -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    {#                    <a class="nav-link" href="{{path('app_burger')}}">Burger</a>#}
+        <nav class="menuHeader">
+
+            <ul class="menuUl">
+
+                <li class="menuLi">
+                    <i class="fa-solid fa-house"></i>
+                    <a class="menuA" href='#'>Accueil</a>
+                    <div class="navItem"></div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tacos</a>
+
+                <li class="menuLi">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <a class="menuA" href='#'>Reservation</a>
+                    <i class="fa-solid fa-angle-down"></i>
+                    <div class="navItem"></div>
+                    <div class="dd">
+                        <a class="dropA" href='#'></a>
+                        <a class="dropA" href='#'>Chambre seule</a>
+                        <a class="dropA" href='#'>Gite Equestre</a>
+                        <a class="dropA" href='#'>Gite Enduro</a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Boissons et Frites</a>
+
+                <li class="menuLi">
+                    <img src="{{ asset('/build/images/Header-Images/LOGO-Gite-Les-Bruyeres.png') }}" alt="logoGiteLesBruyeres"
+                         class="logoHeaderNoir"/>
+                </li>
+
+                <li class="menuLi">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <a class="menuA" href='#'>Boutique</a>
+                    <i class="fa-solid fa-angle-down"></i>
+                    <div class="navItem"></div>
+                </li>
+
+                <li class="menuLi">
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <a class="menuA" href='#'>Contact</a>
+                    <div class="navItem"></div>
+                </li>
+
+            </ul>
+        </nav>
+
+    </div>
+
+
+    <!--RESPONSIVE ET MENU BURGER-->
+
+    <!--------------------------------MENU BURGER-------------------------------------->
+
+    <div id="menu">
+        <div id="menu-bar" onclick="menuOnClick()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </div>
+
+        <nav class="navMenuburger" id="nav">
+            <ul class="ulMenuBurger">
+                <li class="liBG"><a href="#" class="texteMenuBG"><i class="fa-solid fa-house"></i> Accueil</a></li>
+                <li class="liBG"><a href="#" class="texteMenuBG"><i class="fa-solid fa-calendar-days"></i>
+                        Reservation</a>
+                </li>
+                <li class="liBG"><a href="#" class="texteMenuBG"><i class="fa-solid fa-basket-shopping"></i>
+                        Boutique</a>
+                </li>
+                <li class="liBG"><a href="#" class="texteMenuBG"><i class="fa-solid fa-phone-flip"></i> Contact</a>
                 </li>
             </ul>
-            <!-- Left links -->
-        </div>
-        <!-- Collapsible wrapper -->
-
-        <!-- Right elements -->
-        <div class="d-flex align-items-center">
-            <!-- Icon -->
-            <a class="link-secondary me-3" href="#">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-
-            <!-- Notifications -->
-            <div class="dropdown">
-                <a
-                        class="link-secondary me-3 dropdown-toggle hidden-arrow"
-                        href="#"
-                        id="navbarDropdownMenuLink"
-                        role="button"
-                        data-mdb-toggle="dropdown"
-                        aria-expanded="false"
-                >
-                    <i class="fas fa-bell"></i>
-                    <span class="badge rounded-pill badge-notification bg-danger">1</span>
-                </a>
-                <ul
-                        class="dropdown-menu dropdown-menu-end"
-                        aria-labelledby="navbarDropdownMenuLink"
-                >
-                    <li>
-                        <a class="dropdown-item" href="#">Some news</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Another news</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Avatar -->
-            <div class="dropdown">
-                <a
-                        class="dropdown-toggle d-flex align-items-center hidden-arrow"
-                        href="#"
-                        id="navbarDropdownMenuAvatar"
-                        role="button"
-                        data-mdb-toggle="dropdown"
-                        aria-expanded="false"
-                >
-                    <img
-                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                            class="rounded-circle"
-                            height="25"
-                            alt="Black and White Portrait of a Man"
-                            loading="lazy"
-                    />
-                </a>
-                <ul
-                        class="dropdown-menu dropdown-menu-end"
-                        aria-labelledby="navbarDropdownMenuAvatar"
-                >
-                    <li>
-                        <a class="dropdown-item" href="#">My profile</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Settings</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- Right elements -->
+        </nav>
     </div>
-    <!-- Container wrapper -->
-</nav>
-<!-- Navbar -->
+
+    <div class="menu-bg" id="menu-bg"></div>
+
+
+    <!--------------------------------LOGO RESPONSIVE--------------------------------->
+
+    <div class="placementLogoResponsive">
+        <img src="/assets/images/Header-Images/LOGO-Gite-Les-Bruyeres.png" alt="logoGiteLesBruyeres"
+             class="responsiveLogoHeaderNoir"/>
+    </div>
+
+
+    <!--------------------------------PANIER RESPONSIVE--------------------------------->
+
+    <div class="placementPanierResponsive">
+        <div class="panierFondBlanc"></div>
+    </div>
