@@ -1,20 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BoutiqueController!{% endblock %}
+{% block title %}Boutique{% endblock %}
 
 {% block main %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    {% include('partials/_sliderProducts.html.twig') %}
+    {% include('partials/_login.html.twig') %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class="ombreFondTexteEtImages">
+        <div class="fondTexteEtImage">
+            <h2 class="titreSite">Un large choix de produit pour vous</h2>
+            <h5 class="signatureSite">
+                Ici c'est tout ce qu'il y a de mieux fabriqué en Livradois-Forez
+            </h5>
+        </div>
+    </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/BIGBUD/Desktop/GITE-Dev-main/src/Controller/BoutiqueController.php'|file_link(0) }}">src/Controller/BoutiqueController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/BIGBUD/Desktop/GITE-Dev-main/templates/boutique/index.html.twig'|file_link(0) }}">templates/boutique/index.html.twig</a></code></li>
-    </ul>
-</div>
+    {% include('partials/_cards.html.twig') %}
+
 {% endblock %}

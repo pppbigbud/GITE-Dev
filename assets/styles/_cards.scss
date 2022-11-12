@@ -1,0 +1,150 @@
+.blocBlancBoutique {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  position: relative;
+  top: -20vh;
+  z-index: 5;
+}
+
+//--------------------------------REGLAGES CARDS BOISSONS--------------------------------------
+
+.card-drink-green {
+  max-width: 20vw !important;
+  position: relative;
+  -webkit-box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+  box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+}
+
+.card-drink-green:before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  margin: -5px !important;
+  border-radius: inherit !important;
+  background: rgb(23,139,118);
+  background: linear-gradient(180deg, rgba(23,139,118,0.15) 0%, rgba(159,159,159,0) 50%, rgba(23,139,118,0.15) 100%);
+}
+
+.card-drink{
+  background-color: rgba(23,139,118,0.8)!important;
+  color: white !important;
+}
+
+//--------------------------------REGLAGES CARDS SEL--------------------------------------
+
+.card-sel-red {
+  max-width: 20vw !important;
+  position: relative;
+  -webkit-box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+  box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+}
+
+.card-sel-red:before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  margin: -5px !important;
+  border-radius: inherit !important;
+  background: rgb(208,32,55);
+  background: linear-gradient(180deg, rgba(208,32,55,0.15) 0%, rgba(159,159,159,0) 50%, rgba(208,32,55,0.15) 100%);
+}
+
+.card-sel{
+  background-color: rgba(208,32,55,0.8)!important;
+  color: white !important;
+}
+
+//--------------------------------REGLAGES CARDS SUCRE--------------------------------------
+
+.card-sucre-yellow {
+  max-width: 20vw !important;
+  position: relative;
+  -webkit-box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+  box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+}
+
+.card-sucre-yellow:before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  margin: -5px !important;
+  border-radius: inherit !important;
+  background: rgb(225,158,53);
+  background: linear-gradient(180deg, rgba(225,158,53,0.15) 0%, rgba(255,255,255,0) 50%, rgba(225,158,53,0.15) 100%);
+}
+
+.card-sucre{
+  background-color: rgba(225,158,53,0.8)!important;
+  color: white !important;
+}
+
+//--------------------------------REGLAGES CARDS HYGIENE--------------------------------------
+
+.card-hygiene-blue {
+  max-width: 20vw !important;
+  position: relative;
+  -webkit-box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+  box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+}
+
+.card-hygiene-blue:before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  margin: -5px !important;
+  border-radius: inherit !important;
+  background: rgb(96,172,198);
+  background: linear-gradient(180deg, rgba(96,172,198,0.15) 0%, rgba(255,255,255,0) 50%, rgba(96,172,198,0.15) 100%);
+}
+
+.card-hygiene {
+  background-color: rgba(96,172,198,0.8)!important;
+  color: white !important;
+}
+
+//--------------------------------REGLAGES CARDS AUTRES--------------------------------------
+
+.card-other-orange {
+  max-width: 20vw !important;
+  position: relative;
+  -webkit-box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+  box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.2);
+}
+
+.card-other-orange:before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;
+  margin: -5px !important;
+  border-radius: inherit !important;
+  background: rgb(227,121,47);
+  background: linear-gradient(180deg, rgba(227,121,47,0.15) 0%, rgba(255,255,255,0) 50%, rgba(227,121,47,0.15) 100%);
+}
+
+.card-other {
+  background-color: rgba(227,121,47,0.8)!important;
+  color: white !important;
+}
+
+
+.test {
+  background-color: #03a9f4;
+}
+
+@media (max-width: 768px) {
+
+  .card-W {
+    max-width: 80vw;
+  }
+}
