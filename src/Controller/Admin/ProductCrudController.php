@@ -30,6 +30,7 @@ class ProductCrudController extends AbstractCrudController
 
         yield TextField::new('name', 'Nom');
         yield TextareaField::new('description', 'Description');
+        yield TextField::new('vendor', 'Fournisseur');
         yield MoneyField::new('price_ht', 'Prix HT')
             ->setCurrency('EUR');
 

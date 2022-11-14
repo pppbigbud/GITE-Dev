@@ -1,0 +1,20 @@
+<div class="card card-drink-green d-flex m-3">
+
+    <h3 class="card-header card-drink test text-center" style="background-color: black;">
+        {{ product.sousCat }}
+    </h3>
+
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+        <img src="{{ asset('/build/images/Categories-Produits/Boisson.jpg') }}" class="img-fluid"
+             alt="Catégorie Boisson"/>
+    </div>
+
+    <div class="card-body">
+        <h3 class="card-text">{{ product.name }}</h3>
+        <p class="card-text">{{ product.description }}</p>
+        <p class="card-text">Artisan : {{ product.vendor }}</p>
+        <p class="card-text">Prix : {{ product.priceht |format_currency('EUR') }} TTC </p>
+    </div>
+
+</div>
+
