@@ -22,6 +22,7 @@ class CategoryCrudController extends AbstractCrudController
     {
         yield IdField::new('id')->hideOnForm();
         yield TextField::new('name', 'Nom');
+        yield TextField::new('title', 'Titre');
         yield TextareaField::new('description', 'Description');
 
         yield AssociationField::new('sousCat', 'Sous Catégories')

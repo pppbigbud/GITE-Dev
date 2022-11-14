@@ -17,12 +17,12 @@
                     </div>
 
                     <div class="card-body">
-                        <h5 class="card-title">Nos boissons régionales</h5>
+                        <h5 class="card-title">{{ category.title }}</h5>
                         <p class="card-text">{{ category.description }}</p>
-                        <a href="#" class="btn btn-success m-1" style="background-color:{{ category.color }}; border-color:{{ category.color }};">Bières</a>
-                        <a href="#" class="btn btn-success m-1" style="background-color:{{ category.color }};border-color:{{ category.color }};">Vin</a>
-                        <a href="#" class="btn btn-success m-1" style="background-color:{{ category.color }};border-color:{{ category.color }};">Whisky</a>
-                        <a href="#" class="btn btn-success m-1" style="background-color:{{ category.color }};border-color:{{ category.color }};">Sirop</a>
+
+                        {% for souscategory in souscategories %}
+                        <a href="#" class="btn btn-success m-1" style="background-color:{{ category.color }}; border-color:{{ category.color }};">{{ souscategory.name }}</a>
+                        {% endfor %}
                     </div>
 
                 </div>
