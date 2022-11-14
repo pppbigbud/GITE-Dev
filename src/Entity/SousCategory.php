@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\SousCategoryRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -22,6 +24,14 @@ class SousCategory
 
     #[ORM\ManyToOne(inversedBy: 'sousCat')]
     private ?Category $category = null;
+
+    #[ORM\OneToMany(mappedBy: 'sousCat', targetEntity: Product::class, cascade: ['persist', 'remove'])]
+    private Collection $products;
+
+    public function __construct()
+    {
+        $this->products = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -67,6 +77,36 @@ class SousCategory
     public function __toString(): string
     {
         return $this->name;
+    }
+
+    /**
+     * @return Collection<int, Product>
+     */
+    public function getProducts(): Collection
+    {
+        return $this->products;
+    }
+
+    public function addProduct(Product $product): self
+    {
+        if (!$this->products->contains($product)) {
+            $this->products->add($product);
+            $product->setSousCat($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProduct(Product $product): self
+    {
+        if ($this->products->removeElement($product)) {
+            // set the owning side to null (unless already changed)
+            if ($product->getSousCat() === $this) {
+                $product->setSousCat(null);
+            }
+        }
+
+        return $this;
     }
 
 

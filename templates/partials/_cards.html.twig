@@ -1,37 +1,30 @@
+<a href="{{ path('app_boutique_detail', { 'id': category.id }) }}">
 
+<div class="card card-drink-green d-flex m-3">
 
-            <!---------------------------------CARDS BOISSONS-------------------------------->
+    <h3 class="card-header card-drink test text-center"
+        style="background-color:{{ category.color }};">
+        {{ category.name }}</h3>
 
-                <div class="card card-drink-green d-flex m-3">
+    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+        <img src="{{ asset('/build/images/Categories-Produits/Boisson.jpg') }}" class="img-fluid"
+             alt="Catégorie Boisson"/>
+        <a href="#">
+            <div class="mask" style="background-color: {{ category.color }};"></div>
+        </a>
+    </div>
 
-                    <h3 class="card-header card-drink test text-center"
-                        style="background-color:{{ category.color }};">
-                        {{ category.name }}</h3>
+    <div class="card-body">
+        <h5 class="card-title">{{ category.title }}</h5>
+        <p class="card-text">{{ category.description }}</p>
 
-                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img src="{{ asset('/build/images/Categories-Produits/Boisson.jpg') }}" class="img-fluid"
-                             alt="Catégorie Boisson"/>
-                        <a href="#">
-                            <div class="mask" style="background-color: {{ category.color }};"></div>
-                        </a>
-                    </div>
+            {% for souscategory in souscategories  %}
+                <a href="#" class="btn btn-success m-1"
+                   style="background-color:{{ category.color }}; border-color:{{ category.color }};">{{ souscategory.name }}</a>
+            {% endfor %}
 
-                    <div class="card-body">
-                        <h5 class="card-title">{{ category.title }}</h5>
-                        <p class="card-text">{{ category.description }}</p>
+    </div>
 
-                        {% for souscategory in souscategories %}
-                        <a href="#" class="btn btn-success m-1" style="background-color:{{ category.color }}; border-color:{{ category.color }};">{{ souscategory.name }}</a>
-                        {% endfor %}
-                    </div>
+</div>
 
-                </div>
-
-{#        <tr>#}
-{#            <td>{{ category.id }}</td>#}
-{#            <td>{{ category.name }}</td>#}
-{#            <td>{{ category.description }}</td>#}
-{#            <td>{{ category.img }}</td>#}
-{#            <td>{{ category.color }}</td>#}
-{#        </tr>#}
-
+</a>

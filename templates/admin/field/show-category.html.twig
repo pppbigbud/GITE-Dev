@@ -1,0 +1,13 @@
+{% for categories in field.value %}
+    {%- set url = ea_url()
+        .setController('src/Controller/Admin/CategoryCrudController.php')
+        .setAction('detail')
+        .setEntityId(categories.id)
+    -%}
+    <a href="{{ url }}">
+        {{ categories.name }}{% if not loop.last %}, {% endif %}
+    </a>
+{% else %}
+    <span class="badge badge-secondary">None</span>
+
+{% endfor %}

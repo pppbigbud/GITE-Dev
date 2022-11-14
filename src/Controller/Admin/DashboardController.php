@@ -63,21 +63,21 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Voir les produit', 'fas fa-eye', Product::class),
         ]);
 
-        yield MenuItem::subMenu('Catégorie', "fa-brands fa-product-hunt")->setSubItems([
+        yield MenuItem::subMenu('Catégorie', "fa-solid fa-folder")->setSubItems([
             MenuItem::linkToCrud('Créer catégorie', 'fas fa-plus', Category::class)
                 ->setAction(Crud::PAGE_NEW),
             MenuItem::linkToCrud('Voir les catégorie', 'fas fa-eye', Category::class),
         ]);
 
-        yield MenuItem::subMenu('Sous Catégorie', "fa-brands fa-product-hunt")->setSubItems([
+        yield MenuItem::subMenu('Sous Catégorie', "fa-solid fa-folder-tree")->setSubItems([
             MenuItem::linkToCrud('Créer sous-catégorie', 'fas fa-plus', SousCategory::class)
                 ->setAction(Crud::PAGE_NEW),
             MenuItem::linkToCrud('Voir les sous-catégorie', 'fas fa-eye', SousCategory::class),
         ]);
 
-        yield MenuItem::linkToDashboard('Articles', 'fa-solid fa-newspaper');
-
-        yield MenuItem::linkToDashboard('Utilisateurs', 'fa-sharp fa-solid fa-users');
+//        yield MenuItem::linkToDashboard('Articles', 'fa-solid fa-newspaper');
+//
+//        yield MenuItem::linkToDashboard('Utilisateurs', 'fa-sharp fa-solid fa-users');
 
 
 

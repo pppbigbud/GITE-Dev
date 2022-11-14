@@ -20,59 +20,60 @@ class SousCategoryController extends AbstractController
             'sous_categories' => $sousCategoryRepository->findAll(),
         ]);
     }
-
-    #[Route('/new', name: 'app_sous_category_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, SousCategoryRepository $sousCategoryRepository): Response
-    {
-        $sousCategory = new SousCategory();
-        $form = $this->createForm(SousCategoryType::class, $sousCategory);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $sousCategoryRepository->save($sousCategory, true);
-
-            return $this->redirectToRoute('app_sous_category_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->renderForm('sous_category/new.html.twig', [
-            'sous_category' => $sousCategory,
-            'form' => $form,
-        ]);
-    }
-
-    #[Route('/{id}', name: 'app_sous_category_show', methods: ['GET'])]
-    public function show(SousCategory $sousCategory): Response
-    {
-        return $this->render('sous_category/show.html.twig', [
-            'sous_category' => $sousCategory,
-        ]);
-    }
-
-    #[Route('/{id}/edit', name: 'app_sous_category_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, SousCategory $sousCategory, SousCategoryRepository $sousCategoryRepository): Response
-    {
-        $form = $this->createForm(SousCategoryType::class, $sousCategory);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $sousCategoryRepository->save($sousCategory, true);
-
-            return $this->redirectToRoute('app_sous_category_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->renderForm('sous_category/edit.html.twig', [
-            'sous_category' => $sousCategory,
-            'form' => $form,
-        ]);
-    }
-
-    #[Route('/{id}', name: 'app_sous_category_delete', methods: ['POST'])]
-    public function delete(Request $request, SousCategory $sousCategory, SousCategoryRepository $sousCategoryRepository): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$sousCategory->getId(), $request->request->get('_token'))) {
-            $sousCategoryRepository->remove($sousCategory, true);
-        }
-
-        return $this->redirectToRoute('app_sous_category_index', [], Response::HTTP_SEE_OTHER);
-    }
 }
+
+//    #[Route('/new', name: 'app_sous_category_new', methods: ['GET', 'POST'])]
+//    public function new(Request $request, SousCategoryRepository $sousCategoryRepository): Response
+//    {
+//        $sousCategory = new SousCategory();
+//        $form = $this->createForm(SousCategoryType::class, $sousCategory);
+//        $form->handleRequest($request);
+//
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $sousCategoryRepository->save($sousCategory, true);
+//
+//            return $this->redirectToRoute('app_sous_category_index', [], Response::HTTP_SEE_OTHER);
+//        }
+//
+//        return $this->renderForm('sous_category/new.html.twig', [
+//            'sous_category' => $sousCategory,
+//            'form' => $form,
+//        ]);
+//    }
+//
+//    #[Route('/{id}', name: 'app_sous_category_show', methods: ['GET'])]
+//    public function show(SousCategory $sousCategory): Response
+//    {
+//        return $this->render('sous_category/show.html.twig', [
+//            'sous_category' => $sousCategory,
+//        ]);
+//    }
+//
+//    #[Route('/{id}/edit', name: 'app_sous_category_edit', methods: ['GET', 'POST'])]
+//    public function edit(Request $request, SousCategory $sousCategory, SousCategoryRepository $sousCategoryRepository): Response
+//    {
+//        $form = $this->createForm(SousCategoryType::class, $sousCategory);
+//        $form->handleRequest($request);
+//
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $sousCategoryRepository->save($sousCategory, true);
+//
+//            return $this->redirectToRoute('app_sous_category_index', [], Response::HTTP_SEE_OTHER);
+//        }
+//
+//        return $this->renderForm('sous_category/edit.html.twig', [
+//            'sous_category' => $sousCategory,
+//            'form' => $form,
+//        ]);
+//    }
+//
+//    #[Route('/{id}', name: 'app_sous_category_delete', methods: ['POST'])]
+//    public function delete(Request $request, SousCategory $sousCategory, SousCategoryRepository $sousCategoryRepository): Response
+//    {
+//        if ($this->isCsrfTokenValid('delete'.$sousCategory->getId(), $request->request->get('_token'))) {
+//            $sousCategoryRepository->remove($sousCategory, true);
+//        }
+//
+//        return $this->redirectToRoute('app_sous_category_index', [], Response::HTTP_SEE_OTHER);
+//    }
+

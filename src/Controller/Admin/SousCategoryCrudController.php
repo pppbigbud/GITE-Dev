@@ -20,7 +20,9 @@ class SousCategoryCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-        yield IdField::new('id')->hideOnForm();
+        yield IdField::new('id')->hideOnForm()
+            ->hideOnIndex()
+            ->hideOnForm();
         yield TextField::new('name', 'Nom');
         yield TextareaField::new('description', 'Description');
 

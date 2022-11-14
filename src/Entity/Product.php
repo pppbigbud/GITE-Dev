@@ -41,8 +41,12 @@ class Product
     #[ORM\Column(nullable: true)]
     private ?int $stock = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $category = null;
+    #[ORM\ManyToOne(cascade: ['persist', 'remove'], inversedBy: 'products')]
+    private ?Category $category = null;
+
+    #[ORM\ManyToOne(cascade: ['persist', 'remove'], inversedBy: 'products')]
+    private ?SousCategory $sousCat = null;
+
 
     public function getId(): ?int
     {
@@ -157,15 +161,33 @@ class Product
         return $this;
     }
 
-    public function getCategory(): ?string
+    public function getCategory(): ?Category
     {
         return $this->category;
     }
 
-    public function setCategory(?string $category): self
+    public function setCategory(?Category $category): self
     {
         $this->category = $category;
 
         return $this;
     }
+
+    public function __toString(): string
+    {
+        return $this->name;
+    }
+
+    public function getSousCat(): ?SousCategory
+    {
+        return $this->sousCat;
+    }
+
+    public function setSousCat(?SousCategory $sousCat): self
+    {
+        $this->sousCat = $sousCat;
+
+        return $this;
+    }
+
 }

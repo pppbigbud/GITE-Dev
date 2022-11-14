@@ -13,6 +13,7 @@
   justify-content: space-evenly;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
+  padding-left:0;
   font-family: "Lato", sans-serif;
   list-style-type: none;
   background-color: rgba(0, 0, 0, 0);
@@ -38,7 +39,6 @@
   left: 0;
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,0.804359243697479) 0%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 100%);
-  //color: white;
   border-radius: 1rem;
   z-index: 1;
 }
@@ -57,44 +57,6 @@
 .menuLi:hover .dd {
   display: block;
 }
-
-//.menuLi:hover .menuA {
-//  background-color: #3e8e41;
-//}
-
-
-//--------------------------TEST DROPDOWN------------------------
-
-//.menuLi {
-//  position: relative;
-//  display: inline-block;
-//}
-//
-//.dd {
-//  display: none;
-//  position: absolute;
-//  background-color: #f9f9f9;
-//  min-width: 160px;
-//  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-//}
-//
-//.dd a {
-//  color: black;
-//  padding: 12px 16px;
-//  text-decoration: none;
-//  display: block;
-//}
-//
-//.dd a:hover {
-//  background-color: #f1f1f1
-//}
-//
-//.menuA:hover .dd {
-//  display: block;
-//  z-index: 1000;
-//}
-
-//--------------------------SUITE------------------------
 
 .menuHeader > .menuUl > .menuLi > .menuA {
   text-decoration: none;
@@ -165,18 +127,7 @@
     border-radius: 0.5rem;
   }
 
-  //------------------------------PANIER RESPONSIVE--------------------------------------
-
-  //.panierFondBlanc {
-  //  width: 15rem;
-  //  height: 15rem;
-  //  border-radius: 7.5rem;
-  //  background-color: white;
-  //  transform: translate(300%, -100%);
-  //}
-
   //------------------------------MENU BURGER--------------------------------------
-
 
   #menu {
     z-index: 3;

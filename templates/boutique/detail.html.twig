@@ -18,9 +18,16 @@
     <div class="blocBlancBoutique">
         <div class="container">
             <div class="row row-cols-1 row-cols-md-6 g-5">
-                {% for category in categories %}
-                    {% include('partials/_cards.html.twig') %}
+
+                {{ categoryDetail.name }}
+
+                {% for product in categoryDetail.products %}
+                    {{ product.name }}
+                    {{ product.description }}
+                    {{ product.priceht }}
+                    {{ product.sousCat }}
                 {% endfor %}
+
             </div>
         </div>
     </div>
