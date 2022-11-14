@@ -2,7 +2,9 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Category;
 use App\Entity\Product;
+use App\Entity\SousCategory;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -53,13 +55,23 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+        yield MenuItem::linkToDashboard('Panneau de controle', 'fa fa-home');
 
         yield MenuItem::subMenu('Produit', "fa-brands fa-product-hunt")->setSubItems([
             MenuItem::linkToCrud('Créer un produit', 'fas fa-plus', Product::class)
                 ->setAction(Crud::PAGE_NEW),
             MenuItem::linkToCrud('Voir les produit', 'fas fa-eye', Product::class),
         ]);
+
+        yield MenuItem::subMenu('Category', "fa-brands fa-product-hunt")->setSubItems([
+            MenuItem::linkToCrud('Créer catégorie', 'fas fa-plus', Category::class)
+                ->setAction(Crud::PAGE_NEW),
+            MenuItem::linkToCrud('Voir les catégorie', 'fas fa-eye', Category::class),
+        ]);
+
+        yield MenuItem::linkToDashboard('Articles', 'fa-solid fa-newspaper');
+
+        yield MenuItem::linkToDashboard('Utilisateurs', 'fa-sharp fa-solid fa-users');
 
 
 

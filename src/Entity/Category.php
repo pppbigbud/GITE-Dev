@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CategoryRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -25,6 +27,14 @@ class Category
 
     #[ORM\Column(length: 7, nullable: true)]
     private ?string $color = null;
+
+    #[ORM\OneToMany(mappedBy: 'category', targetEntity: SousCategory::class)]
+    private Collection $sousCat;
+
+    public function __construct()
+    {
+        $this->sousCat = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -75,6 +85,36 @@ class Category
     public function setColor(?string $color): self
     {
         $this->color = $color;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, SousCategory>
+     */
+    public function getSousCat(): Collection
+    {
+        return $this->sousCat;
+    }
+
+    public function addSousCat(SousCategory $sousCat): self
+    {
+        if (!$this->sousCat->contains($sousCat)) {
+            $this->sousCat->add($sousCat);
+            $sousCat->setCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSousCat(SousCategory $sousCat): self
+    {
+        if ($this->sousCat->removeElement($sousCat)) {
+            // set the owning side to null (unless already changed)
+            if ($sousCat->getCategory() === $this) {
+                $sousCat->setCategory(null);
+            }
+        }
 
         return $this;
     }
