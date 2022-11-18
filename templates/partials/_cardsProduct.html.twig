@@ -14,6 +14,7 @@
         <p class="card-text">{{ product.description }}</p>
         <p class="card-text">Artisan : {{ product.vendor }}</p>
         <p class="card-text">Prix : {{ product.priceht |format_currency('EUR') }} TTC </p>
+        <a class="btnAjoutCart" href="{{ path('cart_add_product_id', { 'id': product.id}) }}">Ajouter au Panier</a>
     </div>
 
 </div>
