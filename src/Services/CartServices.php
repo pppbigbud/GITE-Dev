@@ -21,34 +21,19 @@ class CartServices
         $session->set('panier', $panier);
     }
 
-//    public function addServices(SessionInterface $session, string $id): void
-//    {
-//        $panier = $session->get('panier', []);
-//
-//        if (!empty($panier['tacos'][$id])) {
-//            $panier['tacos'][$id]++;
-//
-//        } else {
-//
-//            $panier['tacos'][$id] = 1;
-//        }
-//
-//        $session->set('panier', $panier);
-//    }
+    public function addBooking(SessionInterface $session): void
+    {
+        $panier = $session->get('panier', []);
 
-//    public function addDrink(SessionInterface $session, string $id): void
-//    {
-//        $panier = $session->get('panier', []);
-//
-//        if (!empty($panier['drink'][$id])) {
-//            $panier['drink'][$id]++;
-//
-//        } else {
-//
-//            $panier['drink'][$id] = 1;
-//        }
-//
-//        $session->set('panier', $panier);
-//    }
+        if (!empty($panier['booking'])) {
+            $panier['booking']++;
+
+        } else {
+
+            $panier['booking'] = 1;
+        }
+
+        $session->set('panier', $panier);
+    }
 
 }

@@ -18,6 +18,8 @@ class BookingController extends AbstractController
     {
         $events = $bookingRepository->findAll();
 
+        dump($events);
+
         $rdvs = [];
 
         foreach ($events as $event) {

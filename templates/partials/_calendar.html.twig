@@ -1,12 +1,21 @@
 <div class="calendarCenter">
-    <div id="calendrier"></div>
+    <div id="calendrier">
+    </div>
+
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         let calendarEl = document.getElementById('calendrier');
         let calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
+            defaultView: 'listMonth',
+            buttonText: {
+                today:    'Aujourd\'hui',
+                month:    'Mois',
+                week:     'Semaine',
+                day:      'Jour',
+                list:     'Liste'
+            },
             locale: 'fr',
             timeZone: 'Europe/Paris',
             headerToolbar: {

@@ -1,4 +1,6 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <button class="btn">{{ button_label|default('Enregistrer sa reservation') }}</button>
+<a class="btnAjoutCart" href="{{ path('cart_add_booking') }}"><i class="fa-solid fa-cart-plus"></i> Ajouter au Panier</a>
+
 {{ form_end(form) }}

@@ -17,7 +17,8 @@ class BookingType extends AbstractType
             ->add('title')
             ->add('start', DateTimeType::class, [
                 'date_widget' => 'single_text'
-            ])
+            ]
+            )
             ->add('end', DateTimeType::class, [
                     'date_widget' => 'single_text'
             ])
